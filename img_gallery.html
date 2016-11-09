@@ -6,20 +6,20 @@
 		<link rel="stylesheet" href="css/layout.css" media="screen" />
 	</head>
 	<script type="text/javascript" src="js/showPic.js"></script>
-	<body>
+	<body onload="prepareGallery">
 		<h1>Snapshots</h1>
-		<ul>
+		<ul id="imagegallery">
 			<li>
-				<a href="img/Koala.jpg" title="A Koala" onclick="showPic(this); return false;">Koala</a>
+				<a href="img/Koala.jpg" title="A Koala" return false;">Koala</a>
 			</li>
 			<li>
-				<a href="img/Chrysanthemum.jpg" title="A Chrysanthemum" onclick="showPic(this); return false;">Chrysanthemum</a>
+				<a href="img/Chrysanthemum.jpg" title="A Chrysanthemum" return false;">Chrysanthemum</a>
 			</li>
 			<li>
-				<a href="img/Desert.jpg" title="A Desert" onclick="showPic(this); return false;">Desert</a>
+				<a href="img/Desert.jpg" title="A Desert" return false;">Desert</a>
 			</li>
 			<li>
-				<a href="img/Lighthouse.jpg" title="A Lighthouse" onclick="showPic(this); return false;">Lighthouse</a>
+				<a href="img/Lighthouse.jpg" title="A Lighthouse" return false;">Lighthouse</a>
 			</li>
 		</ul>
 		<img id="placeholder" src="img/Jellyfish.jpg" alt="my image gallery" />
