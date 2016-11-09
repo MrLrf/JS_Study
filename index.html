@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Shopping list</title>
+	</head>
+	<body>
+		<h1> What to buy</h1>
+		<p title="a gentle reminder">Don't forget to but this stuff</p>
+		<ul id="purchases">
+			<li>A tin of beans</li>
+			<li class="sale">Chesse</li>
+			<li class="sale important">Milk</li>
+		</ul>
+		<script>
+			alert(document.getElementsByTagName("p")[0].getAttribute("title"));
+		</script>
+	</body>
+</html>
