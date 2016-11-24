@@ -6,6 +6,14 @@
 		<link rel="stylesheet" media="screen" href="css/typography.css" />
 	</head>
 	<body>
+		<ul>
+			<!--accesskey属性可以把一个元素与键盘上的某个特定按键关联起来，一般Windows中快捷键用法为Alt加特定按键
+				mac中快捷键用法为Ctrl加特定按键
+			-->
+			<li><a href="index.html" accesskey="1">Home</a></li>
+			<li><a href="img_gallery.html" accesskey="4">Gallery</a></li>
+			<li><a href="test.html" accesskey="9">Test</a></li>
+		</ul>
 		<h1>What is the Doucument Object Model?</h1>
 		<p>
 			The <abbr title="World Wide Web Consortium">W3C</abbr> defines
@@ -22,5 +30,6 @@
 		<script type="text/javascript" src="js/common.js" ></script>
 		<script type="text/javascript" src="js/displayAbbreciations.js" ></script>
 		<script type="text/javascript" src="js/displayCitations.js" ></script>
+		<script type="text/javascript" src="js/displayAccessKeys.js"></script>
 	</body>
 </html>
