@@ -28,3 +28,13 @@ function insertAfter(newElement, targetElement) {
 		parent.insertBefore(newElement, targetElement.nextSibling);
 	}
 }
+/*获得一个节点的下一个元素节点*/
+function getNextElement(node) {
+	if(node.nodeType == 1) {
+		return node;
+	}
+	if(node.nextSibling) {
+		return getNextElement(node.nextSibling);
+	}
+	return null;
+}
