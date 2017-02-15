@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>图片轮播</title>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+		<script type="text/javascript" src="js/imagecarousel.js"></script>
+		<style type="text/css">
+			.pictures{
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$(".list").animate({left: "100px"}, 5000);
+			});
+		</script>
+	</head>
+	<body>
+		<div id="pictures" class="pictures">
+			<ul class="list">
+				<li><a href="javascript:;"><img src="img/1.jpg" alt=""></a></li>
+				<li><a href="javascript:;"><img src="img/2.jpg" alt=""></a></li>
+				<li><a href="javascript:;"><img src="img/3.jpg" alt=""></a></li>
+				<li><a href="javascript:;"><img src="img/4.jpg" alt=""></a></li>
+				<li><a href="javascript:;"><img src="img/5.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</body>
+</html>
