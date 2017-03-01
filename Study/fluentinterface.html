@@ -7,51 +7,51 @@
 	<body>
 	</body>
 	<script type="text/javascript">
-		var Empoyee = function(name, age, job) {
+		var Empoy = function(name, age, job) {
 			this.name = name;
 			this.age = age;
 			this.job = job;
 		}
 		var Hrmanagement = function() {
-			this.employees = [];
+			this.employee = [];
 		}
 		Hrmanagement.prototype.addemplyee = function(name, age, job) {
-			var emplyee = new Empoyee(name, age, job);
-			this.employees.push(emplyee);
+			var emply = new Empoy(name, age, job);
+			this.employee.push(emply);
 			return this;
 		}
 		Hrmanagement.prototype.agesmallerthan = function(age) {
-			for(var i = 0; i < this.employees.length; i++){
-				if (this.employees[i].age > age) {
-					this.employees.splice(i, 1);
+			for(var i = 0; i < this.employee.length; i++){
+				if (this.employee[i].age > age) {
+					this.employee.splice(i, 1);
 					i--;
 				}
 			}
 			return this;
 		}
 		Hrmanagement.prototype.agebiggerthan = function(age) {
-			for(var i = 0; i < this.employees.length; i++){
-				if (this.employees[i].age < age) {
-					this.employees.splice(i, 1);
+			for(var i = 0; i < this.employee.length; i++){
+				if (this.employee[i].age < age) {
+					this.employee.splice(i, 1);
 					i--;
 				}
 			}
 			return this;
 		}
 		Hrmanagement.prototype.jobnameis = function(job) {
-			for(var i = 0; i < this.employees.length; i++){
-				if (this.employees[i].job != job) {
-					this.employees.splice(i, 1);
+			for(var i = 0; i < this.employee.length; i++){
+				if (this.employee[i].job != job) {
+					this.employee.splice(i, 1);
 					i--;
 				}
 			}
 			return this;
 		}
 		Hrmanagement.prototype.toArray = function() {
-			return this.employees;
+			return this.employee;
 		}
-		var hrmenagement = new Hrmanagement();
-		var records = hrmenagement
+		var hrmanagement = new Hrmanagement();
+		var records = hrmanagement
 			.addemplyee("name1",22, "程序员")
 			.addemplyee("name2",21, "程序员")
 			.addemplyee("name3",26, "测试")
@@ -61,8 +61,13 @@
 			.addemplyee("name7",23, "美工")
 			.agesmallerthan(28)
 			.agebiggerthan(22)
-			.jobnameis("测试")
+			.jobnameis("程序员")
 			.toArray();
-		alert(records.length);
+		var recordsmessage = "";
+		for (var i = 0; i < records.length; i++) {
+			var record = records[i];
+			recordsmessage += "name:" + record.name + ", age:" + record.age + ", job:" + record.job + ";\n"; 
+		}
+		alert(recordsmessage);
 	</script>
 </html>
