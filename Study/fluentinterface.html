@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		var Empoyee = function(name, age, job) {
+			this.name = name;
+			this.age = age;
+			this.job = job;
+		}
+		var Hrmanagement = function() {
+			this.employees = [];
+		}
+		Hrmanagement.prototype.addemplyee = function(name, age, job) {
+			var emplyee = new Empoyee(name, age, job);
+			this.employees.push(emplyee);
+			return this;
+		}
+		Hrmanagement.prototype.agesmallerthan = function(age) {
+			for(var i = 0; i < this.employees.length; i++){
+				if (this.employees[i].age > age) {
+					this.employees.splice(i, 1);
+					i--;
+				}
+			}
+			return this;
+		}
+		Hrmanagement.prototype.agebiggerthan = function(age) {
+			for(var i = 0; i < this.employees.length; i++){
+				if (this.employees[i].age < age) {
+					this.employees.splice(i, 1);
+					i--;
+				}
+			}
+			return this;
+		}
+		Hrmanagement.prototype.jobnameis = function(job) {
+			for(var i = 0; i < this.employees.length; i++){
+				if (this.employees[i].job != job) {
+					this.employees.splice(i, 1);
+					i--;
+				}
+			}
+			return this;
+		}
+		Hrmanagement.prototype.toArray = function() {
+			return this.employees;
+		}
+		var hrmenagement = new Hrmanagement();
+		var records = hrmenagement
+			.addemplyee("name1",22, "程序员")
+			.addemplyee("name2",21, "程序员")
+			.addemplyee("name3",26, "测试")
+			.addemplyee("name4",23, "美工")
+			.addemplyee("name5",26, "测试")
+			.addemplyee("name6",29, "测试")
+			.addemplyee("name7",23, "美工")
+			.agesmallerthan(28)
+			.agebiggerthan(22)
+			.jobnameis("测试")
+			.toArray();
+		alert(records.length);
+	</script>
+</html>
